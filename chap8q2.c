@@ -1,4 +1,4 @@
-#include<stdio.h> //program for chaecking whether the year is leap or not
+#include<stdio.h> //program for checking whether the year is leap or not
 int lpyear(int);
 int main()
 {
