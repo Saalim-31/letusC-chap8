@@ -1,29 +1,22 @@
-#include<stdio.h>
+#include<stdio.h> //program for chaecking whether the year is leap or not
 int lpyear(int);
 int main()
 {
-    int year,res;
+    int year;
     printf("Enter the year :- ");
     scanf("%d",&year);
-    res=lpyear(year);
-    printf("%d is %d",year,res);
-    return 0;
-
-}
-int lpyear(year)
-{
-    int saal;
-    if (saal%100==0)
-
-        if (saal%400==0)
-            printf("Leap year");
-        else
-            printf("Not a leap year");
-
-    if (saal%4==0)
-       {
-           printf("Leap year");}
+    if (lpyear(year))
+        printf("Year %d is a leap year ",year);
     else
-        printf("Not leap year");
-      return saal;
+        printf("Year %d is not a leap year",year);
+    return 0;
 }
+int lpyear(int year)
+{
+    if (year%4==0||year%400==0&&year%100!=0)
+
+        return 1;//return true or false
+    else
+        return 0;
+}
+
